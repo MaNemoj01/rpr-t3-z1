@@ -80,4 +80,9 @@ public class FiksniBroj extends TelefonskiBroj {
             return false;
         }
     }
+
+    public int compareTo(Object o){
+        FiksniBroj broj = (FiksniBroj) o;
+        return this.ispisi().compareTo(broj.ispisi());
+    }
 }

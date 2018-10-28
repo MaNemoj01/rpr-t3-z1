@@ -41,7 +41,7 @@ public class Imenik {
     }
 
     public Set<String> izGrada(Grad g){
-        TreeSet<String> setLjudi = null;
+        TreeSet<String> setLjudi = new TreeSet<>();
         for (Map.Entry<String,TelefonskiBroj> entry : imenik.entrySet()){
             if(entry.getValue() instanceof FiksniBroj){
                 if(( (FiksniBroj)entry.getValue()).getGrad().equals(g))
@@ -53,17 +53,15 @@ public class Imenik {
 
     public Set<TelefonskiBroj> izGradaBrojevi(Grad g){
 
-        Collection<String> imenaLjudi = null;
+        TreeSet<TelefonskiBroj> imenaLjudi = new TreeSet<>();
         for (Map.Entry<String,TelefonskiBroj> entry : imenik.entrySet()){
             if(entry.getValue() instanceof FiksniBroj){
                 if(( (FiksniBroj)entry.getValue()).getGrad().equals(g))
-                    imenaLjudi.add(entry.getKey());
+                    imenaLjudi.add(entry.getValue());
             }
         }
 
-
-
-        return null;
+        return imenaLjudi;
 
     }
 
