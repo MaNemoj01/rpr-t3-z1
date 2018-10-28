@@ -35,6 +35,12 @@ public class MedunarodniBroj extends TelefonskiBroj {
     public void setBroj(String broj) {
         this.broj = broj;
     }
+
+    @Override
+    public String toString(){
+        return this.ispisi();
+    }
+
     @Override
     public int compareTo(Object o){
         FiksniBroj broj = (FiksniBroj) o;

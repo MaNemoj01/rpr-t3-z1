@@ -34,6 +34,11 @@ public class MobilniBroj extends TelefonskiBroj {
     }
 
     @Override
+    public String toString(){
+        return this.ispisi();
+    }
+
+    @Override
     public int compareTo(Object o){
         FiksniBroj broj = (FiksniBroj) o;
         return this.ispisi().compareTo(broj.ispisi());

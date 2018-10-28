@@ -31,7 +31,7 @@ public class Imenik {
 
         for (Map.Entry<String,TelefonskiBroj> entry : imenik.entrySet()) {
             if(entry.getKey().charAt(0) == s){
-                spisak=i+". "+entry.getKey()+" - "+entry.getValue()+"\n";
+                spisak=i+". "+entry.getKey()+" - "+entry.getValue().ispisi()+"\n";
                 i++;
             }
         }
