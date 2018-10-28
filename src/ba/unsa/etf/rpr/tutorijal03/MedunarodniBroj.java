@@ -6,7 +6,7 @@ public class MedunarodniBroj extends TelefonskiBroj {
 
 
     MedunarodniBroj(String drzava, String broj){
-
+        this.drzava=drzava; this.broj=broj;
     }
 
     public String ispisi(){
