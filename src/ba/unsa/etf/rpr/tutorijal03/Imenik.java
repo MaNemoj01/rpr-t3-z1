@@ -28,7 +28,7 @@ public class Imenik {
                 return entry.getKey();
             }
         }
-    return null;
+    return "Izvinite, za trazeni broj mi nemamo ime i prezime vlasnika broja.";
     }
 
     public String naSlovo(char s){

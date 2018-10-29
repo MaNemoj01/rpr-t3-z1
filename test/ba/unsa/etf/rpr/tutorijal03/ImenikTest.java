@@ -69,4 +69,5 @@ class ImenikTest {
         assertEquals("Izvinite, za trazenu osobu mi nemamo broj telefona.",imenik.dajBroj("Niko"));
 
     }
+
 }
