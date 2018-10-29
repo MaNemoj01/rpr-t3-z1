@@ -13,12 +13,13 @@ public class Imenik {
     }
 
     public String dajBroj(String ime){
+        String s=null;
         try {
-
+            s=imenik.get(ime).ispisi();
         }catch (NullPointerException e){
-            return "Izvinite u bazi nemamo broj telefona za osobu koju trazite.";
+            return "Izvinite, za trazenu osobu mi nemamo broj telefona.";
         }
-        return imenik.get(ime).ispisi();
+        return s;
     }
     public String dajIme (TelefonskiBroj broj){
 
