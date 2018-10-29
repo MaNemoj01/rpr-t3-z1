@@ -7,11 +7,11 @@ public class FiksniBroj extends TelefonskiBroj {
 
     public enum Grad {SARAJEVO, TUZLA, ZENICA, ORASJE, TRAVNIK, LIVNO, MOSTAR, BIHAC, BRCKO, GORAZDE, SIROKI_BRIJEG, MRKONJIC_GRAD, BANJA_LUKA, PRIJEDOR, DOBOJ, SAMAC, BIJELJINA, ZVORNIK, PALE, FOCA, TREBINJE}
 
-    private Grad grad;
+    private Grad grad;                                          //atributi
     private String broj;
     private Map<Grad, String> pozivni = new EnumMap<Grad, String>(Grad.class);
 
-    FiksniBroj(Grad grad, String broj) {
+    FiksniBroj(Grad grad, String broj) {                    // konstruktori
         this.setGrad(grad); this.setBroj(broj);
 
         pozivni.put(Grad.TRAVNIK,"030");                 // kantoni
@@ -39,14 +39,14 @@ public class FiksniBroj extends TelefonskiBroj {
     }
 
     @Override
-    public String ispisi(){
+    public String ispisi(){                                         // ispisi iz bazne
         String s="";
         s+=pozivni.get(this.grad)+"/"+this.broj;
         return s;
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode(){                                      // hashiranje manufactory
         int hash = 1;
         hash= hash * 17 + broj.hashCode();
         hash = hash * 31 + grad.hashCode();
@@ -54,7 +54,7 @@ public class FiksniBroj extends TelefonskiBroj {
         return hash;
     }
 
-    public Grad getGrad() {
+    public Grad getGrad() {                                         //getteri i setteri
         return grad;
     }
 
@@ -73,10 +73,10 @@ public class FiksniBroj extends TelefonskiBroj {
     @Override
     public String toString(){
        return this.ispisi();
-    }
+    }               // toString override za lijep ispis
 
 
-    public boolean equals(Grad g){
+    public boolean equals(Grad g){                                  // poredenje za gradove
         if(this.grad.equals(g))
             return true;
         else{
@@ -85,7 +85,7 @@ public class FiksniBroj extends TelefonskiBroj {
     }
 
     @Override
-    public int compareTo(Object o){
+    public int compareTo(Object o){                                     // compareTo override za poredenje
         FiksniBroj broj = (FiksniBroj) o;
         return this.ispisi().compareTo(broj.ispisi());
     }

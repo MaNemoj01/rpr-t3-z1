@@ -1,11 +1,11 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class MedunarodniBroj extends TelefonskiBroj {
-    private String drzava;
+    private String drzava;                                      //atributi
     private String broj;
 
 
-    MedunarodniBroj(String drzava, String broj){
+    MedunarodniBroj(String drzava, String broj){                                // konstruktor
         this.drzava=drzava; this.broj=broj;
     }
 
@@ -13,7 +13,7 @@ public class MedunarodniBroj extends TelefonskiBroj {
         return this.drzava + "/" + this.getBroj();
     }
 
-    public int hashCode(){
+    public int hashCode(){                                                      // hashiranje manufactory
         int hash = 1;
         hash = hash * 17 + drzava.hashCode();
         hash = hash * 31 + broj.hashCode();
@@ -24,7 +24,7 @@ public class MedunarodniBroj extends TelefonskiBroj {
 
     public String getDrzava() {
         return drzava;
-    }
+    }                                         //getteri i setteri
 
     public void setDrzava(String drzava) {
         this.drzava = drzava;
@@ -41,10 +41,10 @@ public class MedunarodniBroj extends TelefonskiBroj {
     @Override
     public String toString(){
         return this.ispisi();
-    }
+    }                               // toString override za lijep ispis
 
     @Override
-    public int compareTo(Object o){
+    public int compareTo(Object o){                                                  // compareTo override za poredenje
         FiksniBroj broj = (FiksniBroj) o;
         return this.ispisi().compareTo(broj.ispisi());
     }
