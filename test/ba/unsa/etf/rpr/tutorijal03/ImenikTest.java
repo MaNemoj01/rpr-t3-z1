@@ -61,4 +61,12 @@ class ImenikTest {
         }
         assertEquals("033/123-156,033/123-456,033/123-656,", result);
     }
+
+    @Test
+    void dajBroj(){
+        Imenik imenik = new Imenik();
+        imenik.dodaj("Belmin",new FiksniBroj(TRAVNIK,"123-123"));
+        assertEquals("Izvinite, za trazenu osobu mi nemamo broj telefona.",imenik.dajBroj("Niko"));
+
+    }
 }
