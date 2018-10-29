@@ -101,6 +101,15 @@ public class Program {
 
         System.out.println(imenik.dajBroj("Belmin"));
 
+        System.out.println("-----------");
+
+        System.out.println(imenik.dajIme(new FiksniBroj(TRAVNIK,"206-123")));
+
+        System.out.println("-----------");
+
+
+
+
 
 
     }
