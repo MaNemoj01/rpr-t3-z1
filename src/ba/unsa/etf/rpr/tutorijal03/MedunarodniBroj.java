@@ -14,8 +14,10 @@ public class MedunarodniBroj extends TelefonskiBroj {
     }
 
     public int hashCode(){
-
-        return 0;
+        int hash = 1;
+        hash = hash * 17 + drzava.hashCode();
+        hash = hash * 31 + broj.hashCode();
+        return hash;
     }
 
 

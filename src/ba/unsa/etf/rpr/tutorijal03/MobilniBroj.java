@@ -12,9 +12,12 @@ public class MobilniBroj extends TelefonskiBroj {
         return "0" + this.getMreza() + "/" + this.getBroj();
     }
 
-    public int hashCode(){
-
-        return 0;
+   @Override
+   public int hashCode(){
+        int hash = 1;
+        hash = hash * 17 + mreza;
+        hash = hash * 31 + broj.hashCode();
+        return hash;
     }
 
     public int getMreza() {
