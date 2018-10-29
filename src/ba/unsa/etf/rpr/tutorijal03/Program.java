@@ -39,6 +39,7 @@ public class Program {
                 case "2": System.out.println("Odabrali ste unos Mobilnog broja, molimo unesite broj mreze.");
                         int mreza = ulaz.nextInt();
                         System.out.println("Unesite broj mobilnog telefona.");
+                        ulaz.nextLine();
                         String broj2=ulaz.nextLine();
                         MobilniBroj mbroj = new MobilniBroj(mreza,broj2);
                         System.out.println("Jeste sigurni da zelite unijeti ovaj broj(DA/NE)"+ mbroj.ispisi());
